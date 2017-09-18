@@ -1,0 +1,127 @@
+
+## ☆ 1
+
+http://blog.csdn.net/u013215018/article/details/54019795
+
+eclipse 是有工作空间的workspaces
+IDEA的工作空间就是project.
+
+.idea 文件夹辅助文件夹
+HelloWorld.iml辅助文件
+
+eclipse
+.settings 文件夹
+.classpath 文件
+.project 文件
+
+## ☆ 2
+
+http://www.cnblogs.com/huangfox/p/3541714.html
+
+sense
+
+添加(create)
+POST /movies/movie/1
+{
+    "title": "The Godfather",
+    "director": "Francis Ford Coppola",
+    "year": 1972,
+    "genres": ["Crime", "Drama"]
+}
+
+POST /movies/movie/2
+{
+    "title": "Lawrence of Arabia",
+    "director": "David Lean",
+    "year": 1962,
+    "genres": ["Adventure", "Biography", "Drama"]
+}
+
+POST /movies/movie/3
+{
+    "title": "To Kill a Mockingbird",
+    "director": "Robert Mulligan",
+    "year": 1962,
+    "genres": ["Crime", "Drama", "Mystery"]
+}
+
+POST /movies/movie/4
+{
+    "title": "Apocalypse Now",
+    "director": "Francis Ford Coppola",
+    "year": 1979,
+    "genres": ["Drama", "War"]
+}
+
+POST /movies/movie/5
+{
+    "title": "Kill Bill: Vol. 1",
+    "director": "Quentin Tarantino",
+    "year": 2003,
+    "genres": ["Action", "Crime", "Thriller"]
+}
+
+POST /movies/movie/6
+{
+    "title": "The Assassination of Jesse James by the Coward Robert Ford",
+    "director": "Andrew Dominik",
+    "year": 2007,
+    "genres": ["Biography", "Crime", "Drama"]
+}
+
+查询(retrevie)
+GET /movies/movie/1 
+
+删除(delete)
+DELETE /movies/movie/1
+
+修改(update)
+POST /movies/movie/6
+{
+    "title": "The Assassination of Jesse James by the Coward Robert Ford",
+    "director": "Andrew Dominik",
+    "year": 2007,
+    "genres": ["Biography", "Crime"]
+}
+
+查询(retrevie)
+
+☆ 1 全文搜索
+
+POST /_search
+{
+    "query": {
+        "match_all": {}
+    }
+}
+
+☆ 2 基本的文本检索
+
+POST /_search
+{
+    "query": {
+        "query_string": {
+           "query": "Crime"
+        }
+    }
+}
+
+☆ 3 指定字段进行检索
+
+POST /_search
+{
+    "query": {
+        "query_string": {
+           "fields": ["title"],
+           "query": "kill"
+        }
+    }
+}
+
+详细的API
+http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/index.html
+
+内容摘抄
+http://joelabrahamsson.com/elasticsearch-101/
+
+
