@@ -1,0 +1,40 @@
+git使用教程
+
+1.基本概念
+working directory—被修改过的文件
+staging area—通过git add添加到暂存区域的文件
+git directory—通过git commit提交到仓库的文件
+
+2.首次使用需要设置用户和邮箱
+
+打开git bush,输入如下命令进行配置
+git config --global user.name "oneqinglong"
+git config --global user.email "oneqinglong@163.com"
+同时，你也可以指定你的编辑器，你的diff工具
+
+git config --global core.editor vim 
+git config --global merge.tool vimdiff
+你可以通过"git config --list"命令来查看你的设置
+
+3.创建代码仓库
+打开git bash 
+进入到代码目录
+执行git init命令
+此时会在代码目录下创建一个.git的目录
+保存仓库和版本信息
+
+4.下载远程代码仓库到project目录
+git clone git://git2.kernel.org/pub/scm/git/project.git
+git clone gituser@git.server.com:project.git
+
+5.添加文件到暂存区域
+git status -s
+//添加单个
+git add filename1 filename2
+git status -s
+//添加所有文件
+git add -a 
+
+6.提交代码到本地
+git commit 
+ 
