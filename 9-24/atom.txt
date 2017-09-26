@@ -1,0 +1,24 @@
+## atom使用教程
+1.打开任意.md文件
+2.打开命令输入框(ctrl+shift+p)
+3.输入markdown preview toggle，enter进入预览
+
+## atom插件分为内置和扩展
+markdown preview是atom的内置插件
+但是要很好的编写markdown还需要安装其他插件
+这里介绍"pretty json"插件安装使用;
+
+### pretty json插件
+1.windows下使用快捷键ctrl+shift+p打开命令输入框
+2.输入setting view install packages and themes
+也可以简单地输入install package
+3.在搜索框输入pretty json，点击package按钮
+4.点击pretty json右边的install按钮即可安装
+
+编写文档时候看到atom对于json的支持不是很友好
+通过pretty json插件可以让json变得更漂亮
+1.选中一段json，只要选择json的内容接口
+2.使用快捷键ctrl+shift+p
+3.打开命令输入框，输入pretty json prettify
+4.按下enter键即可看到格式化效果
+
